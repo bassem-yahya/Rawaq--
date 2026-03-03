@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rawaq-رواق</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Cairo",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* ===============================
+       🔥 هنا كود الخلفية
+       لو عايز تغير الخلفية:
+       - غير ألوان الـ linear-gradient
+       - أو احذفهم وحط background-color
+       - أو استخدم background-image
+       =============================== */   
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("12.jpg") no-repeat center center/cover;
+
+    color:white;
+    padding:20px;
+}
+
+/* Animated Background */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:45px 30px;
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    animation: fadeUp 1.2s ease forwards;
+    opacity:0;
+}
+
+/* Fade + Slide Animation */
+@keyframes fadeUp{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+.logo{
+    width:110px;
+    margin-bottom:20px;
+    animation: float 3s ease-in-out infinite;
+     /* 🔥 الشادو الأبيض */
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.9))
+            drop-shadow(0 0 20px rgba(255,255,255,0.6));
+}
+
+/* Floating Logo */
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+p{
+    font-size:15px;
+    line-height:1.8;
+    opacity:0.85;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.buttons a{
+    text-decoration:none;
+    padding:14px;
+    border-radius:14px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    transition:0.3s ease;
+}
+
+.buttons a:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 8px 25px rgba(0,114,255,0.6);
+}
+
+footer{
+    margin-top:25px;
+    font-size:13px;
+    opacity:0.6;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .card{
+        padding:35px 20px;
+    }
+    h1{
+        font-size:22px;
+    }
+    p{
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="logo.png" alt="رواق Logo" class="logo">
+
+    <h1>Rawaq-رواق</h1>
+
+    <p>
+        منصتك لتعلم البرمجة، الذكاء الاصطناعي، وريادة الأعمال التقنية.
+        ابدأ رحلتك وطور مهاراتك مع محتوى عملي ومجتمع داعم.
+    </p>
+
+    <div class="buttons">
+        <a href="https://www.facebook.com/profile.php?id=61581288248982" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zmjq0kx" target="_blank">Instagram</a>
+        <a href="https://wa.me/qr/AZ5Q6URYYFGCO1" target="_blank">Whatsapp</a>
+        <a href="https://chat.whatsapp.com/GVDiOolK3yhEP4xqG3vDlA?mode=gi_t" target="_blank">Whatsapp Community</a>
+    </div>
+
+    <footer>
+        © 2026 Rawaaq Academy
+    </footer>
+</div>
+
+</body>
+</html>
